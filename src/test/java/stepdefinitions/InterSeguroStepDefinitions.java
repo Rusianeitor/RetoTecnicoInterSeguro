@@ -59,7 +59,7 @@ public class InterSeguroStepDefinitions {
 
     @Then("se muestra mensaje validacion por documento {string}")
     public void seMuestraMensajeValidacionDocumento(String mensaje) throws InterruptedException {
-        Thread.sleep(1000);
+        Thread.sleep(2000);
         System.out.println("Se lee del feature esto: " + mensaje);
         OnStage.theActorInTheSpotlight().should(seeThat(DocumentoInvalido.toThe(mensaje), is(true)));
     }
